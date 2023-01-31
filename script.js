@@ -6,19 +6,63 @@ const passwordInput = document.querySelector('input[name="password"]');
 const confirmPasswordInput = document.querySelector(
   'input[name="confirm-password"]'
 );
+const ctaHeader = document.querySelector("#cta-header");
+const formCompletion = document.querySelector("#form-completion");
 const form = document.querySelector("#sign-up-form");
+
+function isValidEmail(email) {
+  const reg =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  return reg.test(String(email));
+}
+
+let isFormValid = false;
+
+function resetElement(el) {
+  el.classList.remove("error");
+  el.nextElementSibling.classList.add("hidden");
+}
+
+function invalidateEl(el) {
+  el.classList.add("error");
+  el.nextElementSibling.classList.remove("hidden");
+}
 
 function validateInputs(el) {
   if (!el.value) {
-    el.classList.add("error");
-    el.nextElementSibling.classList.remove("hidden");
+    isFormValid = false;
+    invalidateEl(el);
   }
+  if (!isValidEmail(emailInput.value)) {
+    isFormValid = false;
+    invalidateEl(emailInput);
+  }
+  resetElement(el);
+  isFormValid = true;
 }
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+
   validateInputs(firstNameInput);
   validateInputs(lastNameInput);
   validateInputs(emailInput);
-  validateInputs(telInput);
+  if (isFormValid) {
+    // do our request if the form is valid
+    form.remove();
+    ctaHeader.remove();
+    formCompletion.classList.remove("hidden");
+  }
+});
+
+firstNameInput.addEventListener("input", (e) => {
+  validateInputs(firstNameInput);
+});
+
+lastNameInput.addEventListener("input", (e) => {
+  validateInputs(lastNameInput);
+});
+
+emailInput.addEventListener("input", (e) => {
+  validateInputs(emailInput);
 });

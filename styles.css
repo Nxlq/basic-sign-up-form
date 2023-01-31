@@ -259,9 +259,6 @@ input {
   /* border-top: solid 1px var(--body-bg-color); */
 }
 
-#log-in-prompt {
-}
-
 a:link,
 a:visited {
   color: var(--button-color);
@@ -280,5 +277,21 @@ a:visited {
 }
 
 .hidden {
+  display: none;
+}
+
+#form-completion {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 0px 90px;
+  flex-basis: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#form-completion.hidden {
   display: none;
 }
