@@ -143,6 +143,10 @@ em {
 
 body {
   height: 100vh;
+  background-image: url(images/vincent-guth-_E_ySzvSJRI-unsplash.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -188,18 +192,23 @@ h2 {
   flex-direction: column;
   justify-content: center;
   gap: 40px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 form {
   height: calc((var(--container-height) * 0.6));
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .container-form-inputs {
   height: calc((var(--container-height) * 0.37));
-  padding: 0px 90px;
-  padding-top: 30px;
+  padding: 30px 90px;
+  /* padding-top: 30px; */
   display: flex;
   flex-direction: column;
+  justify-content: center;
   /* flex-wrap: wrap; */
   border-top: solid 1px var(--body-bg-color);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -210,6 +219,7 @@ form {
   display: flex;
   gap: 110px;
 }
+
 input {
   height: 1.7rem;
   width: 20rem;
@@ -221,4 +231,34 @@ input {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+#btn-create {
+  background-color: var(--button-color);
+  height: 2.5rem;
+  width: 15rem;
+  border: solid var(--button-color);
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-size: larger;
+}
+
+.btn-create-div {
+  height: calc((var(--container-height) * 0.23));
+  padding: 0px 90px;
+  display: flex;
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  align-items: center;
+  gap: 20px;
+  flex-basis: 23%;
+  /* border-top: solid 1px var(--body-bg-color); */
+}
+
+#log-in-prompt {
+}
+
+a:link,
+a:visited {
+  color: var(--button-color);
 }
