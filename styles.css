@@ -233,6 +233,10 @@ input {
   gap: 10px;
 }
 
+.form-inputs.three {
+  width: 99.19px;
+}
+
 #btn-create {
   background-color: var(--button-color);
   height: 2.5rem;
@@ -261,4 +265,20 @@ input {
 a:link,
 a:visited {
   color: var(--button-color);
+}
+
+.error {
+  border: solid 2px red;
+}
+
+.valid {
+  border: solid 2px green;
+}
+
+.error-message {
+  color: red;
+}
+
+.hidden {
+  display: none;
 }

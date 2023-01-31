@@ -22,38 +22,83 @@
           </h2>
           <h2>Let <em>us</em> do the work for you!</h2>
         </header>
-        <form action="" method="get">
+        <form id="sign-up-form" action="" method="get">
           <div class="container-form-inputs">
             <h2 id="form-header">Let's do this!</h2>
 
             <div class="form-inputs one">
               <div>
                 <label for="firstName">FIRST NAME</label>
-                <input type="text" id="firstName" name="firstName" />
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  placeholder="First"
+                />
+                <p class="error-message hidden">Your first name is required</p>
               </div>
               <div>
                 <label for="lastName">LAST NAME</label>
-                <input type="text" id="lastName" name="lastName" />
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  placeholder="Last"
+                />
+                <p class="error-message hidden">Your last name is required</p>
               </div>
             </div>
             <div class="form-inputs two">
               <div>
                 <label for="email">EMAIL</label>
-                <input type="email" name="email" id="email" />
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="email@example.com"
+                />
+                <p class="error-message hidden">
+                  Your email address is required
+                </p>
               </div>
               <div>
                 <label for="phoneNumber">PHONE NUMBER</label>
-                <input type="tel" id="phoneNumber" name="phoneNumber" />
+                <input
+                  type="tel"
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  placeholder="123-456-7890"
+                  pattern="\d{3}[\-]\d{3}[\-]\d{4}"
+                />
+                <p class="error-message hidden">
+                  Your phone number is required
+                </p>
               </div>
             </div>
             <div class="form-inputs three">
               <div>
                 <label for="password">PASSWORD</label>
-                <input type="password" id="password" name="password" />
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Must contain an Uppercase, Lowercase, and Number"
+                  pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+                  title="Must contain an Uppercase, Lowercase, and Number"
+                />
+                <p class="error-message hidden">
+                  Must contain an Uppercase, Lowercase, and Number
+                </p>
               </div>
               <div>
                 <label for="confirm-password">CONFIRM PASSWORD</label>
-                <input type="password" id="confirm-password" name="password" />
+                <input
+                  type="password"
+                  id="confirm-password"
+                  name="confirm-password"
+                  pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+                />
+                Passwords must match
               </div>
             </div>
           </div>
