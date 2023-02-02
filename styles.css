@@ -131,9 +131,9 @@ table {
   --container-height: 95vh;
   --container-width: 75vw;
   --body-bg-color: #1d1b38;
-  --container-bg-color: #000000;
-  --text-color: #12b9d6;
-  --button-color: #ff01d5;
+  --container-bg-color: #698269;
+  --text-color: black;
+  --button-color: #b85c38;
   --container-border: solid 2px black;
   --container-border-radius: 20px;
 }
@@ -143,8 +143,8 @@ em {
 
 body {
   height: 100vh;
-  background-image: url(images/julius-drost-pYAvBZvplOM-unsplash.jpg);
-  background-position: bottom;
+  background-image: url(images/andrey-svistunov-JpQK_B7THMw-unsplash.jpg);
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -173,9 +173,10 @@ h2 {
 
 .content-image {
   flex-basis: 30%;
-  background-image: url("images/remy_loz-slRLJQAUeqs-unsplash.jpg");
+  background-image: url("images/clovis-wood-photography-YXB0dSmZbAw-unsplash.jpg");
   background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
+  background-position: left;
 }
 
 .content-right {
