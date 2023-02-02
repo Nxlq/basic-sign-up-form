@@ -130,10 +130,10 @@ table {
 :root {
   --container-height: 95vh;
   --container-width: 75vw;
-  --body-bg-color: #2f2519;
-  --container-bg-color: #4a3f35;
-  --text-color: #fa7d09;
-  --button-color: #ff4301;
+  --body-bg-color: #1d1b38;
+  --container-bg-color: #000000;
+  --text-color: #12b9d6;
+  --button-color: #ff01d5;
   --container-border: solid 2px black;
   --container-border-radius: 20px;
 }
@@ -143,8 +143,8 @@ em {
 
 body {
   height: 100vh;
-  background-image: url(images/vincent-guth-_E_ySzvSJRI-unsplash.jpg);
-  background-position: center;
+  background-image: url(images/julius-drost-pYAvBZvplOM-unsplash.jpg);
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -173,7 +173,7 @@ h2 {
 
 .content-image {
   flex-basis: 30%;
-  background-image: url("images/rickie-tom-schunemann-1RCygLIsFkU-unsplash.jpg");
+  background-image: url("images/remy_loz-slRLJQAUeqs-unsplash.jpg");
   background-size: cover;
   background-position: center;
 }
