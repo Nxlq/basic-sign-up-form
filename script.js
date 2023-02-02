@@ -21,6 +21,25 @@ function isValidPhone(tel) {
   return reg.test(String(tel));
 }
 
+function isValidPassword(password) {
+  const reg = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$/;
+  return reg.test(String(password));
+}
+
+function checkPasswordsMatch() {
+  if (
+    passwordInput.value === "" ||
+    (passwordInput.value === "" && confirmPasswordInput.value === "")
+  ) {
+    isFormValid = false;
+    return;
+  }
+  if (passwordInput.value !== confirmPasswordInput.value) {
+    isFormValid = false;
+    invalidateEl(confirmPasswordInput);
+  }
+}
+
 let isFormValid = false;
 let isValidating = false;
 
@@ -51,6 +70,10 @@ function validateInputs(el) {
     isFormValid = false;
     invalidateEl(telInput);
   }
+  if (!isValidPassword(passwordInput.value)) {
+    isFormValid = false;
+    invalidateEl(passwordInput);
+  }
 }
 
 form.addEventListener("submit", (e) => {
@@ -58,8 +81,11 @@ form.addEventListener("submit", (e) => {
   isValidating = true;
   validateInputs(firstNameInput);
   validateInputs(lastNameInput);
-  validateInputs(emailInput); // doesnt seem required because the value is passed directly into the isValidEmail function inside the validateInputs function, unsure?
-  validateInputs(telInput); // doesnt seem required because the value is passed directly into the isValidPhone function inside the validateInputs function, unsure?
+  validateInputs(emailInput);
+  validateInputs(telInput);
+  validateInputs(passwordInput);
+  checkPasswordsMatch();
+
   if (isFormValid) {
     // do our request if the form is valid
     form.remove();
@@ -82,4 +108,8 @@ emailInput.addEventListener("input", (e) => {
 
 telInput.addEventListener("input", (e) => {
   validateInputs(telInput);
+});
+
+passwordInput.addEventListener("input", (e) => {
+  validateInputs(passwordInput);
 });
