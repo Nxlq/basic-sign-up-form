@@ -179,6 +179,11 @@ h2 {
   background-position: left;
 }
 
+.logo {
+  height: 43%;
+  width: 100%;
+}
+
 .content-right {
   flex-basis: 70%;
   display: flex;
